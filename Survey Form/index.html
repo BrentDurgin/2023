@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <form action="" id="survey-form">
+      <fieldset>
+        <label for="full-name" id="name-label">Name <input type="text" id="name" placeholder="Enter your name" required></label>
+        <label for="email" id="email-label">Email <input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Enter your email" required></label>
+        <label for="age" id="number-label">Age (optional) <input type="number" id="number" min="13" max="120" placeholder="Age" required></label>
+      </fieldset>
+
+      <fieldset>
+        <label for="current-role">Which option best describes your current role?
+          <select name="current-role" id="dropdown">
+            <option value="" id="current-role">Select current role</option>
+            <option value="1" id="current-role">Student</option>
+            <option value="2" id="current-role">Full Time Job</option>
+            <option value="3" id="current-role">Full Time Learner</option>
+            <option value="4" id="current-role">Prefer not to say</option>
+            <option value="5" id="current-role">Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="recommend" name="recommend">Would you recommend freeCodeCamp to a friend?
+          <input type="radio" name="recommend" value="definitely" class="inline"> Definitely
+          <input type="radio" name="recommend" value="maybe" class="inline"> Maybe
+          <input type="radio" name="recommend" value="not-sure" class="inline"> Not sure
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="improvements">What would you like to see improved? (Check all that apply)
+            <input type="checkbox" value="front-end-projects" class="inline"> Front-end Projects
+            <input type="checkbox" value="back-end-projects" class="inline"> Back-end Projects
+            <input type="checkbox" value="data-visualization" class="inline"> Data Visualization
+            <input type="checkbox" value="challenges" class="inline"> Challenges
+            <input type="checkbox" value="open-source-community" class="inline"> Open Source Community
+            <input type="checkbox" value="gitter-help-rooms" class="inline"> Gitter help rooms
+            <input type="checkbox" value="videos" class="inline"> Videos
+            <input type="checkbox" value="city-meetups" class="inline"> City Meetups
+            <input type="checkbox" value="wiki" class="inline"> Wiki
+            <input type="checkbox" value="forum" class="inline"> Forum
+            <input type="checkbox" value="additional-courses" class="inline"> Additional Courses
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="comments">Any comments or suggestions? <textarea name="comments" id="" cols="30" rows="10" placeholder="Enter your comment here..."></textarea></label>
+      </fieldset>
+
+      <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
